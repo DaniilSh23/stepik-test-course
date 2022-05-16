@@ -15,3 +15,10 @@ class LoginPageLocators():
     '''
     LOGIN_FORM = (By.CSS_SELECTOR, '#login_form')
     REGISTER_FORM = (By.CSS_SELECTOR, '#register_form')
+
+
+class ProductPageLocator():
+    '''
+    Класс для хранения локаторов для страницы с товарами
+    '''
+    ADD_PRODUCT_TO_BASKET = (By.CSS_SELECTOR, '.btn.btn-lg.btn-primary.btn-add-to-basket')

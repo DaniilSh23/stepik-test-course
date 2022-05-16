@@ -1,4 +1,3 @@
-from selenium.webdriver.common.by import By
 from .base_page import BasePage
 from .locators import MainPageLocators
 
@@ -15,6 +14,9 @@ class MainPage(BasePage):
         # это один из способов перехода на страницу, второй показан в stepik, lesson 4.2, step 9
         link = self.browser.find_element(*MainPageLocators.LOGIN_LINK)
         link.click()
+        # код для обработки alert сообщений в браузере
+        alert = self.browser.switch_to.alert
+        alert.accept()
 
     def should_be_login_link(self):
         '''
