@@ -4,10 +4,17 @@ from .locators import MainPageLocators
 
 
 class MainPage(BasePage):
+    '''Главная страница и методы работы с ней'''
+
     def go_to_login_page(self):
+        '''
+        Метод перехода на страницу логина пользователя
+        :return: None
+        '''
         # так как LOGIN_LINK - это кортеж, мы его раскрываем через *
-        login_link = self.browser.find_element(*MainPageLocators.LOGIN_LINK)
-        login_link.click()
+        # это один из способов перехода на страницу, второй показан в stepik, lesson 4.2, step 9
+        link = self.browser.find_element(*MainPageLocators.LOGIN_LINK)
+        link.click()
 
     def should_be_login_link(self):
         '''
